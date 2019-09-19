@@ -1,0 +1,10 @@
+{
+    "guacamoleVersion" : "1.1.0",
+
+    "name"      : "Simulation Platform Authentication Extension",
+    "namespace" : "guac-auth-simpf",
+
+    "authProviders" : [
+	"jp.neuroinf.sim.SimPFAuthenticationProvider"
+    ]
+}
