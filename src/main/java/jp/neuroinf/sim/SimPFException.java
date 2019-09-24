@@ -1,4 +1,3 @@
-
 package jp.neuroinf.sim;
 
 public class SimPFException extends Exception {

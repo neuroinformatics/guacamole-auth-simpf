@@ -1,4 +1,3 @@
-
 package jp.neuroinf.sim;
 
 import org.apache.guacamole.properties.StringGuacamoleProperty;

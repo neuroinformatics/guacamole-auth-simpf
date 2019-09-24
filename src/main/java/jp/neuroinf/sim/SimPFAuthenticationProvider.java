@@ -1,10 +1,7 @@
-
 package jp.neuroinf.sim;
 
 import java.util.HashMap;
 import java.util.Map;
-
-import javax.servlet.http.HttpServletRequest;
 
 import org.apache.guacamole.GuacamoleException;
 import org.apache.guacamole.net.auth.Credentials;
@@ -23,8 +20,7 @@ public class SimPFAuthenticationProvider extends SimpleAuthenticationProvider {
 			throws GuacamoleException {
 
 		try {
-			HttpServletRequest request = credentials.getRequest();
-			String session_id = request.getParameter("sid");
+			String session_id = credentials.getUsername();
 			if (session_id == null || session_id.equals("")) {
 				return null;
 			}
