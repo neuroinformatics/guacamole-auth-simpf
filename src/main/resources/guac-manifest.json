@@ -6,5 +6,23 @@
 
     "authProviders" : [
 	"jp.neuroinf.sim.SimPFAuthenticationProvider"
-    ]
+    ],
+
+     "js" : [
+        "simpf.min.js"
+    ],
+
+    "css" : [
+        "simpf.min.css"
+    ],
+
+    "html" : [
+        "templates/simpfField.html"
+    ],
+
+    "resources" : {
+        "templates/simpfField.html" : "text/html"
+    }
+
+
 }

@@ -76,6 +76,56 @@
                 </executions>
             </plugin>
 
+            <!-- JS/CSS Minification Plugin -->
+            <plugin>
+                <groupId>com.samaxes.maven</groupId>
+                <artifactId>minify-maven-plugin</artifactId>
+                <version>1.7.5</version>
+                <executions>
+                    <execution>
+                        <id>default-cli</id>
+                        <configuration>
+                            <charset>UTF-8</charset>
+
+                            <webappSourceDir>${basedir}/src/main/resources</webappSourceDir>
+                            <webappTargetDir>${project.build.directory}/classes</webappTargetDir>
+
+                            <cssSourceDir>/</cssSourceDir>
+                            <cssTargetDir>/</cssTargetDir>
+                            <cssFinalFile>simpf.css</cssFinalFile>
+
+                            <cssSourceIncludes>
+                                <cssSourceInclude>**/*.css</cssSourceInclude>
+                            </cssSourceIncludes>
+
+                            <jsSourceDir>/</jsSourceDir>
+                            <jsTargetDir>/</jsTargetDir>
+                            <jsFinalFile>simpf.js</jsFinalFile>
+
+                            <jsSourceIncludes>
+                                <jsSourceInclude>**/*.js</jsSourceInclude>
+                            </jsSourceIncludes>
+
+                            <!-- Do not minify and include tests -->
+                            <jsSourceExcludes>
+                                <jsSourceExclude>**/*.test.js</jsSourceExclude>
+                            </jsSourceExcludes>
+                            <jsEngine>CLOSURE</jsEngine>
+
+                            <!-- Disable warnings for JSDoc annotations -->
+                            <closureWarningLevels>
+                                <misplacedTypeAnnotation>OFF</misplacedTypeAnnotation>
+                                <nonStandardJsDocs>OFF</nonStandardJsDocs>
+                            </closureWarningLevels>
+
+                        </configuration>
+                        <goals>
+                            <goal>minify</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
         </plugins>
     </build>
 
@@ -97,6 +147,14 @@
             <version>1.1.0</version>
             <scope>system</scope>
             <systemPath>${basedir}/lib/guacamole-ext-1.1.0.jar</systemPath>
+        </dependency>
+
+        <!-- Jersey - JAX-RS Implementation -->
+        <dependency>
+            <groupId>javax.ws.rs</groupId>
+            <artifactId>jsr311-api</artifactId>
+            <version>1.1.1</version>
+            <scope>provided</scope>
         </dependency>
 
     </dependencies>

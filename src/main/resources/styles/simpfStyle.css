@@ -1,0 +1,15 @@
+.simpf-connection {
+	display: none;
+	width: 200px;
+	height: 100px;
+	font-size: 10pt;
+	position: absolute;
+	text-align: right;
+	right: 10px;
+	top: 10px;
+}
+	
+.simpf-status {
+    color: red;
+    font-weight: bold;
+}

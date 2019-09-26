@@ -58,4 +58,14 @@ public class SimPFProperties {
 		}
 	};
 
+	/**
+	 * ping command
+	 */
+	public static final StringGuacamoleProperty PING_COMMAND = new StringGuacamoleProperty() {
+		@Override
+		public String getName() {
+			return "simpf-ping-command";
+		}
+	};
+
 }
