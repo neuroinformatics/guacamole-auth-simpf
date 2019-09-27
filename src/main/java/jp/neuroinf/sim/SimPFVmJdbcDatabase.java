@@ -33,7 +33,7 @@ abstract public class SimPFVmJdbcDatabase extends SimPFVmDatabase {
             Class.forName(this.driver).newInstance();
             Connection conn = DriverManager.getConnection(this.url, this.username, this.password);
             // get basic information
-            String sql = "SELECT hostname, protocol, port, password FROM connection WHERE sid=?";
+            String sql = "SELECT hostname, protocol, port, password FROM connection WHERE sid=? AND status='READY'";
             PreparedStatement pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, session_id);
             ResultSet rs = pstmt.executeQuery();

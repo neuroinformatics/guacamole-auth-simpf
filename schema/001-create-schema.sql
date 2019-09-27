@@ -29,6 +29,7 @@ CREATE TABLE `connection` (
   `port` int(11) NOT NULL,
   `password` varchar(256) NOT NULL,
   `status` varchar(32) NOT NULL,
+  `timestamp` int(11) NOT NULL,
   PRIMARY KEY (`sid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -77,4 +78,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-09-19 18:18:56
+-- Dump completed on 2019-09-27 21:43:16
