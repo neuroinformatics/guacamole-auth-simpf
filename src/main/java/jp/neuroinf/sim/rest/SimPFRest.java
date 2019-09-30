@@ -27,7 +27,7 @@ public class SimPFRest {
     }
 
     @GET
-    @Path("ping")
+    @Path("isalive")
     public Map<String, String> ping() {
         final Map<String, String> ret = new HashMap<>();
         boolean response = pingCommand();

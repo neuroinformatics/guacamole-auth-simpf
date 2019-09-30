@@ -16,7 +16,7 @@ angular.module('simpf').factory('simpfService', ['$injector',
             };
             return requestService({
                 method: 'GET',
-                url: 'api/session/ext/simpf/ping',
+                url: 'api/session/ext/simpf/isalive',
                 params: httpParameters
             });
         };
