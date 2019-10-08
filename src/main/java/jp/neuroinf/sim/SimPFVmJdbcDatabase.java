@@ -55,7 +55,7 @@ abstract public class SimPFVmJdbcDatabase extends SimPFVmDatabase {
             pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, session_id);
             rs = pstmt.executeQuery();
-            if (rs.next()) {
+            while (rs.next()) {
                 String name = rs.getString(1);
                 String value = rs.getString(2);
                 vm.setParameter(name, value);
