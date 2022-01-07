@@ -21,7 +21,7 @@ public class SimPFRest {
     private final String pingCommand;
 
     public SimPFRest(String host) throws GuacamoleException {
-        Environment environment = new LocalEnvironment();
+        Environment environment = LocalEnvironment.getInstance();
         this.hostname = host;
         this.pingCommand = environment.getRequiredProperty(SimPFProperties.PING_COMMAND);
     }

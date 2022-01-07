@@ -7,7 +7,7 @@ public class SimPFVmMySQLDatabase extends SimPFVmJdbcDatabase {
 
     public SimPFVmMySQLDatabase() throws SimPFException {
         try {
-            Environment environment = new LocalEnvironment();
+            Environment environment = LocalEnvironment.getInstance();
             String hostname = environment.getRequiredProperty(SimPFProperties.MYSQL_HOSTNAME);
             String port = environment.getRequiredProperty(SimPFProperties.MYSQL_PORT);
             String database = environment.getRequiredProperty(SimPFProperties.MYSQL_DATABASE);
